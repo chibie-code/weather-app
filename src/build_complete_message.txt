@@ -1,0 +1,30 @@
+C:\Users\ictde\Documents\Learning Bootstrap, Tailwind, PHP, React\react\learning-react\weather-app>yarn build
+yarn run v1.22.10
+warning ..\package.json: No license field
+$ react-scripts build
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  41.72 KB  build\static\js\2.dc9a4330.chunk.js
+  22.77 KB  build\static\css\2.6f2185d1.chunk.css
+  1.59 KB   build\static\js\main.b77ada3f.chunk.js
+  1.56 KB   build\static\js\3.33cde909.chunk.js
+  1.17 KB   build\static\js\runtime-main.9dd67c4b.js
+  787 B     build\static\css\main.2304178f.chunk.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  yarn global add serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+Done in 130.62s.
