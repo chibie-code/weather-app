@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import 'cirrus-ui'; 
 import './App.css';
 import React, { useState, useEffect } from 'react';
@@ -15,7 +14,7 @@ function App() {
 
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
-  const [temp, setTemp] = useState(undefined);
+  // const [temp, setTemp] = useState(undefined);
 
   useEffect(()=>{
     transitionBg(undefined);
@@ -33,7 +32,7 @@ function App() {
       .then(result=>{
         // console.log('result', result);
         transitionBg(result.main.temp);
-        (typeof result !== 'undefined')?setTemp(result.main.temp):setTemp(null);
+        // (typeof result !== 'undefined')?setTemp(result.main.temp):setTemp(null);
         setWeather(result);
         setQuery('');
       })
@@ -90,6 +89,14 @@ function App() {
         --bg-img: url(${fog});`;
     }
   }
+
+  /*
+  (typeof weather.main !== 'undefined')?((weather.main.temp > 16)?
+          <img className="img-stretch image" id="sunny" src={sunny}/>:
+          <img className="img-stretch image" id="snow" src={snow}/>
+          ):
+          <img className="img-stretch image" id="fog" src={fog}/>
+  */
   
   return (
     <div className="App section bg-orange-200">
@@ -129,9 +136,9 @@ function App() {
           
           <div className="images-container">
             <div className="images">
-              <img className="img" id="sunny" src={sunny}/>
-              <img className="img" id="snow" src={snow}/>
-              <img className="img" id="fog" src={fog}/>
+              <img className="img" alt='' id="sunny" src={sunny}/>
+              <img className="img" alt='' id="snow" src={snow}/>
+              <img className="img" alt='' id="fog" src={fog}/>
             </div>
           </div>
 
@@ -140,13 +147,5 @@ function App() {
     </div>
   );
 }
-{/*(typeof weather.main !== 'undefined')?((weather.main.temp > 16)?
-          <img className="img-stretch image" id="sunny" src={sunny}/>:
-          <img className="img-stretch image" id="snow" src={snow}/>
-          ):
-          <img className="img-stretch image" id="fog" src={fog}/>*/}
-          {/* <div>
-          something
-          </div> */}
 
 export default App;
