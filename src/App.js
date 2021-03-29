@@ -111,9 +111,9 @@ function App() {
                 <h1 className={`title_ uppercase temp ${(weather.main.temp > 16)?'text-light':'text-light'}`}>{Math.round(weather.main.temp)}°C</h1>
                 <p className={`subtitle_ weather ${(weather.main.temp > 16)?'text-light':'text-light'}`}>{weather.weather[0].main}
                 {" "}
-                {(weather.weather[0].main === 'Clouds')&&<i class="fas fa-cloud-sun"></i>}
-                {(weather.weather[0].main === 'Clear')&&<i class="fas fa-sun"></i>}
-                {(weather.weather[0].main === 'Rain')&&<i class="fas fa-cloud-sun-rain"></i>}
+                {(weather.weather[0].main === 'Clouds')&&<i className="fas fa-cloud-sun"></i>}
+                {(weather.weather[0].main === 'Clear')&&<i className="fas fa-sun"></i>}
+                {(weather.weather[0].main === 'Rain')&&<i className="fas fa-cloud-sun-rain"></i>}
                 
                 
                 
